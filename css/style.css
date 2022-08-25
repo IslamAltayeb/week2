@@ -1,0 +1,1125 @@
+/* global prop */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #0abf53;
+    --second-color: #007bff;
+    --third-color: #00112c;
+    --forth-color: #f3f6f9;
+    --main-font: "Fakt", sans-serif, Helvetica, Arial;
+    --second-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* start header section */
+.header {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    height: 60px;
+}
+
+.header .menu {
+    display: none;
+}
+
+.header .container {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.header .container img {
+    width: 100px;
+    height: 30px;
+    margin-right: 15%;
+}
+
+.down {
+    display: none;
+    flex-grow: 1;
+    flex-flow: wrap;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    background-color: white;
+    width: 90%;
+    height: 380px;
+    margin: 0 auto;
+    padding: 15px;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.down .sub1 {
+    width: 275px;
+}
+
+.down .sub2 {
+    width: 275px;
+}
+
+.down .sub3 {
+    width: 275px;
+}
+
+.down .sub4 {
+    width: 275px;
+    background-color: var(--forth-color);
+    background-size: cover;
+    padding: 10px;
+}
+
+.down h2 {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14pt;
+    padding: 5px;
+}
+
+.down h4 {
+    font-family: var(--second-font);
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 5px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.down h4:hover {
+    text-decoration: underline;
+}
+
+.down p {
+    margin-left: 5px;
+    font-size: 14px;
+    font-family: var(--main-font);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header .container .nav {
+    margin-left: -29%;
+    padding-top: .5%;
+}
+
+.header .container .nav a {
+    margin-right: 10px;
+    padding-right: 20px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    color: #00112c;
+    text-decoration: none;
+}
+
+.header .container .nav a:hover {
+    border-top: 2px solid #0abf53;
+    padding-top: 24px;
+}
+
+.header .container .nav a.arrow::after {
+    content: "";
+    border: 6px;
+    border-style: solid;
+    border-color: #00112c transparent transparent transparent;
+    position: absolute;
+    top: 34px;
+    margin-left: 5px;
+}
+
+.header .container .log-in {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+
+.header .container .log-in i {
+    font-size: 20px;
+    display: block;
+    margin-right: 25px;
+    color: var(--third-color);
+    margin-top: 10px;
+}
+
+.header .container .log-in i:hover {
+    cursor: pointer;
+}
+
+.header .container .log-in p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.header .container .log-in button {
+    padding: 10px;
+    width: 120px;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.header .container .log-in button:hover {
+    background-color: #04963e;
+    transition: 1s;
+}
+
+/* responsive header for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    .header .container {
+        display: none;
+    }
+
+    .header .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+
+    .header .menu img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .sidebar {
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 5%;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 24px 48px 0 rgb(0 0 0 / 10%);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 100px;
+    }
+
+    .sidebar a {
+        padding: 20px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: var(--main-font);
+        font-weight: 500;
+        color: black;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #f1f1f1;
+    }
+
+    .header .menu .sidebar .log-in i {
+        font-size: 20px;
+        display: block;
+        margin-left: 20px;
+        color: var(--third-color);
+        margin-top: 30px;
+    }
+
+    .header .menu .lin .sidebar .log-in p {
+        font-family: var(--main-font);
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .header .menu .lin .sidebar .log-in button {
+        padding: 10px;
+        width: 120px;
+        color: white;
+        background-color: var(--main-color);
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        font-size: 40px;
+        margin-left: 50px;
+    }
+
+    .openbtn {
+        font-size: 35px;
+        cursor: pointer;
+        background-color: transparent;
+        color: black;
+        border: none;
+        float: right;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    /* #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    } */
+}
+
+/* end header section */
+
+/* start business grow section */
+.grow {
+    padding-top: 15px;
+}
+
+.grow .container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 auto;
+    width: 88%;
+}
+
+.grow .container .text {
+    width: 40%;
+}
+
+.grow .container .text h1 {
+    font-weight: 600;
+    font-family: var(--main-font);
+    font-size: 64px;
+    letter-spacing: -0.015em;
+    line-height: 74px;
+    text-align: left;
+    color: var(--third-color);
+    padding-top: 30px;
+}
+
+.grow .container .text p {
+    padding-top: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #00112c;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: left;
+    letter-spacing: .5px;
+}
+
+.grow .container .text button {
+    color: #fff;
+    background-color: #0abf53;
+    border-color: #0abf53;
+    height: 45px;
+    padding: 10px;
+    line-height: 16px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 175px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.grow .container .text button:hover {
+    background-color: #04963e;
+    transition: all 1s;
+}
+
+.grow .prand {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 100px;
+
+}
+
+.grow .prand img {
+    width: 150px;
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+/* responsive grow section for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    .grow .container .text h1 {
+        font-weight: 600;
+        font-family: var(--main-font);
+        font-size: 48px;
+        letter-spacing: -0.015em;
+        line-height: 58px;
+        text-align: left;
+        color: var(--third-color);
+        padding-top: 30px;
+        width: 50%;
+        margin-left: 30px;
+    }
+
+    .grow .container .text p {
+        margin-inline-start: 30px;
+        font-size: 16px;
+    }
+
+    .grow .container .text button {
+        margin-left: 30px;
+    }
+
+    .grow .container .vid video {
+        width: 400px;
+        /* margin-right: -80px; */
+        padding-top: 100px;
+    }
+
+    .grow .prand img {
+        width: 90px;
+        padding-top: 50px;
+        margin-left: 5px;
+    }
+
+}
+
+
+/* end business grow section */
+
+/* start finance section */
+.finance {
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-color: var(--forth-color);
+}
+
+.finance .container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.finance .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.finance .content li {
+    list-style: none;
+    width: 300px;
+    padding-top: 60px;
+}
+
+.finance .container h2 {
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: left;
+    color: var(--third-color);
+    letter-spacing: -0.015em;
+    line-height: 42px;
+    width: 55%;
+}
+
+.finance .content h4 {
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+
+.finance .content p {
+    padding-top: 15px;
+    font-size: 18px;
+    font-family: var(--main-font);
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+    width: 275px;
+    font-weight: 300;
+}
+
+.finance .content p>span {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.finance .content img {
+    width: 20px;
+    padding-bottom: 25px;
+}
+
+/* responsive grow section for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    .finance .container h2 {
+        font-weight: 400;
+    }
+
+    .finance .content li {
+        width: 150px;
+    }
+
+    .finance .content p {
+        width: 150px;
+    }
+
+}
+
+/* end finance section */
+
+/* start pay section */
+.pay {
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.pay .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.pay .container .vid {
+    width: 40%;
+}
+
+.pay .container .vid video {
+    width: 100%;
+}
+
+.pay .container .payment-method {
+    width: 40%;
+    padding-top: 80px;
+}
+
+.pay .container .payment-method p.tag {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    background-color: rgba(10, 191, 83, 0.12);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 6px 12px;
+}
+
+.pay .container .payment-method h2 {
+    font-family: var(--main-font);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--third-color);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    line-height: 58px;
+    text-align: left;
+}
+
+.pay .container .payment-method p.customers {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.pay .container .payment-method h5 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.pay .container .payment-method h5:hover {
+    text-decoration: underline;
+}
+
+.pay .container .payment-method p {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+/* end pay section */
+
+/* start data section */
+.data {
+    padding-top: 100px;
+}
+
+.data .container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.data .container p.tag {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    margin-left: 50%;
+    background-color: rgba(10, 191, 83, 0.12);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 6px 12px;
+}
+
+.data .container h1 {
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    color: var(--third-color);
+    letter-spacing: 0.015em;
+    text-align: center;
+    width: 570px;
+    padding-top: 25px;
+    margin-left: 28%;
+}
+
+.data .container p {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 2;
+    text-align: center;
+    width: 700px;
+    margin-left: 23%;
+    padding-bottom: 40px;
+}
+
+.data .container p>span {
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.data .container p>span:hover {
+    text-decoration: none;
+}
+
+.data .container .ph {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.data .container .ph img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 24px 48px 0 rgb(0 0 0 / 10%);
+    background-color: var(--forth-color);
+}
+
+/* responsive grow section for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    .data .container h1 {
+        margin-left: 15%;
+    }
+
+    .data .container p {
+        margin-left: 5%;
+    }
+}
+
+/* end data section */
+
+/* start operation section */
+.operation .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.operation .container .txt {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.operation .container .txt p.tag {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    background-color: rgba(10, 191, 83, 0.12);
+    border-radius: 6px;
+    width: fit-content;
+    padding: 6px 12px;
+}
+
+.operation .container .txt h1 {
+    font-family: var(--main-font);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--third-color);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    line-height: 58px;
+    text-align: left;
+}
+
+.operation .container .txt p {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 2;
+    text-align: left;
+    width: 420px;
+    padding-bottom: 40px;
+}
+
+.operation .container .txt p>strong {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.operation .container .txt p.tg {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 5px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+
+.operation .container .image {
+    width: 50%;
+}
+
+.operation .container .image img {
+    width: 100%;
+    height: 99%;
+}
+
+/* end operation section */
+
+/* start solutions section */
+.Solution {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--forth-color);
+}
+
+.Solution .container {
+    margin: 0 auto;
+    width: 88%;
+}
+
+.Solution .container h1 {
+    font-family: var(--main-font);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--third-color);
+    padding-top: 5px;
+    padding-bottom: 15px;
+    line-height: 58px;
+    text-align: left;
+    width: 60%;
+}
+
+.Solution .container p {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 2;
+    text-align: left;
+    width: 55%;
+    padding-bottom: 40px;
+}
+
+.Solution .container nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.Solution .container nav ul li {
+    padding-right: 30px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: -60px;
+}
+
+.Solution .container nav ul li:hover {
+    border-bottom: 2px solid #0abf53;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+/* end solutions section */
+
+/* strat digital section */
+
+.Digital {
+    padding-top: 30px;
+    background-color: var(--forth-color);
+}
+
+.Digital .container {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Digital .container .tx {
+    width: 40%;
+}
+
+.Digital .container .tx h1 {
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--third-color);
+    padding-top: 120px;
+    padding-bottom: 15px;
+    line-height: 58px;
+    text-align: left;
+
+}
+
+.Digital .container .tx p {
+    color: var(--third-color);
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: 2;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.Digital .container .tx p.sp {
+    font-family: var(--second-font);
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: -30px;
+}
+
+.Digital .container .tx h5 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.Digital .container .tx h5:hover {
+    text-decoration: underline;
+}
+
+.Digital .container .pho {
+    width: 50%;
+}
+
+.Digital .container .pho img {
+    width: 100%;
+    height: 90%;
+    border-radius: 6px;
+}
+
+.Digital .com {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 100px;
+
+}
+
+.Digital .com img {
+    width: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 20px;
+}
+
+/* responsive grow section for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    .Digital .com img {
+        width: 90px;
+        margin-left: 0;
+    }
+}
+
+/* end digital section */
+
+/* start explore section */
+.explore {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--main-color);
+}
+
+.explore .container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.explore .container h2 {
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.explore .container button {
+    margin-left: 42%;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+
+.explore .container button:hover {
+    background-color: rgb(212, 211, 211);
+    transition: all 1s;
+}
+
+/* end explore section */
+
+/* start footer section */
+footer {
+    background-color: #00112c;
+}
+
+footer .container {
+    padding-top: 60px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+footer hr.hr {
+    opacity: .2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+footer .container .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer .container .links p>strong {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .container .links li {
+    list-style: none;
+    color: #fff;
+    padding-top: 20px;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: 100;
+    font-size: 14px;
+}
+
+footer .container .links li:hover {
+    text-decoration: underline;
+}
+
+footer .container .links .about-links {
+    width: 16%;
+}
+
+footer .container .links .pro-links {
+    width: 16%;
+}
+
+footer .container .links .res-links {
+    width: 16%;
+}
+
+footer .container .links .plat-links {
+    width: 16%;
+}
+
+footer .container .links .info {
+    width: 24%;
+}
+
+footer .container .links .info input {
+    height: 45px;
+    width: 260px;
+    border: 1px solid #fff;
+    border-right: none;
+    background-color: #00112c;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+footer .container .links .info button {
+    height: 45px;
+    width: 35px;
+    margin-left: -10px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    cursor: pointer;
+}
+
+footer .container .links .info p {
+    font-size: 12px;
+    font-family: var(--main-font);
+    font-weight: lighter;
+    line-height: 1.6;
+    color: #a5afbd;
+    padding-bottom: 15px;
+}
+
+footer .container .links .info i {
+    font-size: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 1px solid #a5afbd;
+    border-radius: 6px;
+    color: #a5afbd;
+}
+
+footer .container .links .info i:hover {
+    background-color: #a5afbd;
+    color: #00112c;
+}
+
+footer .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+footer .options .pri p {
+    color: #a5afbd;
+    font-size: 14px;
+    font-family: var(--main-font);
+    letter-spacing: .015em;
+}
+
+footer .options .pri p>span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer .options .lan i {
+    font-size: 20px;
+    color: #fff;
+}
+
+footer .options select {
+    height: 30px;
+    width: 150px;
+    background-color: #00112c;
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--main-font);
+    border: none;
+    cursor: pointer;
+}
+
+footer .options .lan select option {
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* responsive grow section for moile and tablet size  */
+@media (min-width: 250px) and (max-width: 1024px) {
+    footer .container .links .info input {
+        width: 150px;
+    }
+
+    footer .container .links .info button {
+        width: 30px;
+    }
+}
+
+/* end footer section */
