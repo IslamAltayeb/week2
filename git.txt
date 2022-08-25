@@ -1,0 +1,8 @@
+ Q/ git init command
+A/ The git init command is used to create a new blank repository 
+
+Q/ git clone command
+A/ The git clone is a git command, which creates a clone/copy of an existing repository into a new directory
+
+ Q/ git push command
+ A/ The git push command is used to upload local repository content to a remote repository
