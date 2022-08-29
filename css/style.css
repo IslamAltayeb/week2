@@ -193,7 +193,7 @@ hr {
 }
 
 /* responsive header for moile and tablet size  */
-@media (min-width: 250px) and (max-width: 1024px) {
+@media (min-width: 250px) and (max-width: 1100px) {
     .header .container {
         display: none;
     }
@@ -313,7 +313,7 @@ hr {
     width: 88%;
 }
 
-@media (min-width: 200px) and (max-width:1024px) {
+@media (min-width: 200px) and (max-width:1100px) {
     .grow .container {
         flex-flow: column;
     }
@@ -354,7 +354,7 @@ hr {
     letter-spacing: .5px;
 }
 
-@media (min-width: 200px) and (max-width:1024px) {
+@media (min-width: 200px) and (max-width:1100px) {
     .grow .container .text p {
         margin-left: 40px;
         padding-bottom: 10px;
@@ -381,7 +381,7 @@ hr {
     cursor: pointer;
 }
 
-@media (min-width: 200px) and (max-width:1024px) {
+@media (min-width: 200px) and (max-width:1100px) {
     .grow .container .text button {
         margin-bottom: 20px;
         margin-left: 40%;
@@ -407,7 +407,7 @@ hr {
 }
 
 /* responsive grow section for moile and tablet size  */
-@media (min-width: 200px) and (max-width: 1024px) {
+@media (min-width: 200px) and (max-width: 1100px) {
     .grow .container .text {
         width: 100%;
     }
@@ -509,7 +509,7 @@ hr {
 }
 
 /* responsive grow section for moile and tablet size  */
-@media (min-width: 200px) and (max-width: 1024px) {
+@media (min-width: 200px) and (max-width: 1100px) {
     .finance .container {
         width: 100%;
     }
@@ -626,7 +626,7 @@ hr {
 
 }
 
-@media (min-width: 200px) and (max-width:1024px) {
+@media (min-width: 200px) and (max-width:1100px) {
     .pay .container {
         width: 100%;
         flex-flow: column;
@@ -747,17 +747,25 @@ hr {
 }
 
 /* responsive grow section for moile and tablet size  */
-@media (min-width: 250px) and (max-width: 1024px) {
+@media (min-width: 250px) and (max-width: 1100px) {
+    .data .container .data-text {
+        width: 90%;
+    }
+
     .data .container h1 {
-        margin-left: 15%;
+        font-size: 30px;
+        margin-left: 40px;
+        width: 100%;
     }
 
     .data .container p {
-        margin-left: 5%;
+        width: 100%;
+        margin: 10%;
     }
 
     .data .container .ph img {
         width: 90%;
+        margin-left: 15PX;
     }
 }
 
@@ -839,7 +847,7 @@ hr {
     height: 99%;
 }
 
-@media (min-width: 200px) and (max-width: 1024px) {
+@media (min-width: 200px) and (max-width: 1100px) {
     .operation .container {
         flex-flow: column;
     }
@@ -1015,7 +1023,7 @@ hr {
 }
 
 /* responsive grow section for moile and tablet size  */
-@media (min-width: 250px) and (max-width: 1024px) {
+@media (min-width: 250px) and (max-width: 1100px) {
     .Digital .com img {
         width: 90px;
         margin-left: 0;
@@ -1220,9 +1228,9 @@ footer .options .lan select option {
 }
 
 /* responsive grow section for moile and tablet size  */
-@media (min-width: 250px) and (max-width: 1024px) {
+@media (min-width: 250px) and (max-width: 1100px) {
     footer .container .links .info input {
-        width: 150px;
+        width: 100px;
     }
 
     footer .container .links .info button {
