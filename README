@@ -1,0 +1,21 @@
+what is cd?
+cd is a command to change directory
+cd "name of directory"  
+
+
+what is git init ?
+This command is used to start a new repository.
+git init "repository name"
+
+
+what is git add ?
+This command adds a file to the staging area.
+git add "file"
+
+what is git commit ?
+This command records or snapshots the file permanently in the version history.
+git commit -m "Type in the commit message"
+
+what is git push ?
+This command sends the branch commits to your remote repository.
+git push "variable name" then "branch"
